@@ -1,0 +1,15 @@
+<snippet>
+<content>
+<![CDATA[
+<VirtualHost *:80>
+	ServerName      ${1:domain.${2:com}}
+	ServerAlias     www.${3:domain.${4:com}}
+	DocumentRoot    ${5:/var/www/html/${6:domain.${7:com}}}
+
+	CustomLog       ${8:/var/log/httpd/${9:domain.com-access.log} common}
+	ErrorLog        ${10:/var/log/httpd/${11:domain.com-error.log}}
+</VirtualHost>
+]]>
+</content>
+	<tabTrigger>vhost</tabTrigger>
+</snippet>
